@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My project</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+    <div ng-app="myProject">
+        <nav>
+            <ul>
+                <li><a href="#/!">MAIN</a></li>
+                <li><a href="#!repos">REPOSITORIES</a></li>
+                <li><a href="#!contribs">CONTRIBUTORS</a></li>
+            </ul>
+        </nav>
+        <header>
+
+            <h1>Front-end developer recruitmet test</h1>
+            <h3>A responsive website</h3>
+        </header>
+        <div ng-view></div>
+    </div>
+    <footer>
+      <h3>The site was made by Piotr Kaczmarski</h3>
+  </footer>
+</body>
+
+</html>

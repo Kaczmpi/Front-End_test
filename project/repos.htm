@@ -1,0 +1,56 @@
+<div ng-controller="ReposCtrl" class="container">
+
+    <p><b>The repos table</b></p>
+
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <td class="pointy">
+                    <p ng-click="sortType = 'name'; sortReverse = !sortReverse">
+                        Name
+                        <span ng-show="sortType == 'name' && !sortReverse"><i class="fa fa-caret-up"></i>
+                        </span>
+                        <span ng-show="sortType == 'name' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+                <td class="pointy">
+                    <p ng-click="sortType = 'forks_count'; sortReverse = !sortReverse">
+                        Forks
+                        <span ng-show="sortType == 'forks_count' && !sortReverse"><i class="fa fa-caret-up"></i></span>
+                        <span ng-show="sortType == 'forks_count' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+                <td class="pointy">
+                    <p ng-click="sortType = 'watchers_count'; sortReverse = !sortReverse">
+                        Watchers
+                        <span ng-show="sortType == 'watchers_count' && !sortReverse"><i class="fa fa-caret-up"></i></span>
+                        <span ng-show="sortType == 'watchers_count' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+                <td class="pointy">
+                    <p ng-click="sortType = 'stargazers_count'; sortReverse = !sortReverse">
+                        Stargazers
+                        <span ng-show="sortType == 'stargazers_count' && !sortReverse"><i class="fa fa-caret-up"></i></span>
+                        <span ng-show="sortType == 'stargazers_count' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+                <td class="pointy">
+                    <p ng-click="sortType = 'language'; sortReverse = !sortReverse">
+                        Language
+                        <span ng-show="sortType == 'language' && !sortReverse"><i class="fa fa-caret-up"></i></span>
+                        <span ng-show="sortType == 'language' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in reposData | orderBy:sortType:sortReverse">
+                <td>{{ x.name }}</td>
+                <td>{{ x.forks_count}}</td>
+                <td>{{ x.watchers_count }}</td>
+                <td>{{ x.stargazers_count }}</td>
+                <td>{{ x.language }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

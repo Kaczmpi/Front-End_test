@@ -1,0 +1,40 @@
+<div ng-controller="ContribsCtrl" class="container">
+
+    <p><b>The contribs table</b></p>
+
+    <table class="table-custom">
+        <thead>
+            <tr>
+                <td class="pointy">
+                    <p ng-click="sortType = 'nickname'; sortReverse = !sortReverse">
+                        Nickname
+                        <span ng-show="sortType == 'nickname' && !sortReverse"><i class="fa fa-caret-up"></i>
+                        </span>
+                        <span ng-show="sortType == 'nickname' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+                <td class="pointy">
+                    <p ng-click="sortType = 'team'; sortReverse = !sortReverse">
+                        Team
+                        <span ng-show="sortType == 'team' && !sortReverse"><i class="fa fa-caret-up"></i></span>
+                        <span ng-show="sortType == 'team' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+                <td class="pointy">
+                    <p ng-click="sortType = 'contributions'; sortReverse = !sortReverse">
+                        Contributions
+                        <span ng-show="sortType == 'contributions' && !sortReverse"><i class="fa fa-caret-up"></i></span>
+                        <span ng-show="sortType == 'contributions' && sortReverse"><i class="fa fa-caret-down"></i></span>
+                    </p>
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="x in contribsData | orderBy:sortType:sortReverse">
+                <td>{{ x.nickname }}</td>
+                <td>{{ x.team}}</td>
+                <td>{{ x.contributions }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
