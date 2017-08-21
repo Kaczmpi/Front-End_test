@@ -14,7 +14,7 @@ The site is single web page application based on AngularJS routing.<br />
 The main tab contains some images to work with responsivness of the page.<br />
 Other tabs contain a data from GitHub api and from static file<br />
 Each table can be sorted by any coulumn and order<br />
-Unfortunetly the data drom the site https://www.x-formation.com/wp-content/uploads/2014/09/contributors.json cannot be aquired because Cross-origin resource sharing (CORS) mechnism must be enabled on the server site.<br />
+Unfortunetly the data from the site https://www.x-formation.com/wp-content/uploads/2014/09/contributors.json cannot be aquired because Cross-origin resource sharing (CORS) mechnism must be enabled on the server site.<br />
 Despite this fact, we can still get this information by simply type into console<br />
 For Linux run:<br />
 $ google-chrome --disable-web-security <br />
