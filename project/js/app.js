@@ -1,19 +1,17 @@
-
-
 var app = angular.module("myProject", ["ngRoute"]);
-app.config(function($routeProvider) {
+app.config(function ($routeProvider) {
     $routeProvider
-    .when("/", {
-        templateUrl : "main.htm"
-    })
-    .when("/repos", {
-        templateUrl : "repos.htm",
-        controller: 'ReposCtrl'
-    })
-    .when("/contribs", {
-        templateUrl : "contribs.htm",
-        controller: 'ContribsCtrl'
-    });
+        .when("/", {
+            templateUrl: "main.htm"
+        })
+        .when("/repos", {
+            templateUrl: "repos.htm",
+            controller: 'ReposCtrl'
+        })
+        .when("/contribs", {
+            templateUrl: "contribs.htm",
+            controller: 'ContribsCtrl'
+        });
 });
 
 app.controller('ReposCtrl', function ($scope, $http) {
@@ -34,4 +32,3 @@ app.controller('ContribsCtrl', function ($scope, $http) {
             $scope.contribsData = response.data;
         });
 });
-
